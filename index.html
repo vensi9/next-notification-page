@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="flex items-center justify-between px-10 py-5">
+    <div class="flex items-center ">
+      <span class="text-2xl  sm:font-[.625rem] font-semibold mr-2">Notifications</span>
+      <span class="rounded-[.1875rem] bg-blue-900 text-white text-xs w-6 h-5 flex items-center justify-center">
+        3
+      </span><!--number indicating unread messages-->
+    </div>
+    <span class="text-sm cursor-pointer">Mark all as read</span>
+  </nav>
+
+  <!-- Mark Webber reacted to your recent post My first tournament today!
+  1m ago -->
+  <div class=" mx-10 grid gap-3">
+    <div class="flex py-2 px-5 bg-[#cee5ed36] shadow-md rounded-lg items-center">
+      <div class="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+        <img src="./assets//images/avatar-mark-webber.webp" alt="Profile Image" class="w-full h-full object-cover">
+      </div>
+      <div class="m-4 flex-grow ">
+        <!-- Upper Information -->
+        <div>
+          <span class="font-semibold cursor-pointer">Mark Webber</span>
+          <span class="text-gray-600 text-sm">reacted to your recent post</span>
+          <span class="font-semibold inline-flex items-center gap-1 cursor-pointer">My first tournament today!
+            <span class="w-1.5 h-1.5 bg-hsl-custom rounded-full"></span>
+          </span>
+        </div>
+        <!-- Timestamp (1m ago) -->
+        <div class="text-gray-400 text-xs">1m ago</div>
+      </div>
+    </div>
+    <!-- Angela Gray followed you
+    5m ago -->
+    <div class="flex px-5 py-2 bg-[#cee5ed36] shadow-md rounded-lg items-center">
+      <div class="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+        <img src="./assets/images/avatar-angela-gray.webp" alt="" class="w-full h-full object-cover">
+      </div>
+      <div class="m-4 flex-grow">
+        <div>
+          <span class="font-semibold cursor-pointer">Angela Gray</span>
+          <span class="text-gray-600 text-sm inline-flex items-center gap-1">commented on your post
+            <span class="w-1.5 h-1.5 bg-[#eb3e3e] rounded-full "></span>
+          </span>
+        </div>
+        <div class="text-gray-400 text-xs">1m ago</div>
+
+      </div>
+    </div>
+    <!-- Jacob Thompson has joined your group Chess Club
+    1 day ago -->
+    <div class="flex px-5 py-2 bg-[#cee5ed36] shadow-md rounded-lg items-center">
+      <div class="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+        <img src="./assets/images/avatar-jacob-thompson.webp" alt="" class="w-full h-full object-cover">
+      </div>
+      <div class="m-4 flex-grow">
+        <div>
+          <span class="font-semibold cursor-pointer">Jacob Thompson</span>
+          <span class="text-gray-600 text-sm">has joined your group</span>
+          <span class="font-semibold inline-flex items-center gap-1 cursor-pointer">Chess Club
+            <span class="w-1.5 h-1.5 bg-[#eb3e3e] rounded-full"></span>
+          </span>
+        </div>
+        <div class="text-gray-400 text-xs">1 day ago</div>
+      </div>
+    </div>
+    <!-- Rizky Hasanuddin sent you a private message
+    5 days ago
+    Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+    I'm already having lots of fun and improving my game. -->
+    <div class="flex flex-col px-5 py-2 rounded-lg  ">
+      <div class="flex items-center">
+        <div class="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+          <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="" class="w-full h-full object-cover">
+        </div>
+        <div class="m-4 flex-grow">
+          <div>
+            <span class="font-semibold cursor-pointer">Rizky Hasanuddin</span>
+            <span class="text-gray-600 text-sm">sent you a private message</span>
+          </div>
+          <div class="text-gray-400 text-xs">5 days ago</div>
+        </div>
+      </div>
+      <div class="cursor-pointer border flex ml-[4.50rem] px-5 py-3 bg-white border-gray-300 rounded-lg items-center">
+        <p class="text-gray-400 text-sm">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks
+          now and
+          I'm already having lots of fun and improving my game.</p>
+      </div>
+    </div>
+
+
+
+    <!-- Kimberly Smith commented on your picture
+    1 week ago -->
+    <div class="flex px-5 py-2 rounded-lg items-center">
+      <div class="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+        <img src="./assets/images/avatar-kimberly-smith.webp" alt="" class="w-full h-full object-cover">
+      </div>
+      <div class="m-4 flex-grow">
+        <div>
+          <span class="font-semibold cursor-pointer">Kimberly Smith</span>
+          <span class="text-gray-600 text-sm">commented on your picture</span>
+        </div>
+        <div class="text-gray-400 text-xs">1 week ago</div>
+      </div>
+    </div>
+    <!-- Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
+    2 weeks ago -->
+    <div class="flex px-5 py-2 rounded-lg items-center">
+      <div class="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+        <img src="./assets/images/avatar-nathan-peterson.webp" alt="" class="w-full h-full object-cover">
+      </div>
+      <div class="m-4 flex-grow">
+        <div>
+          <span class="font-semibold cursor-pointer">Nathan Peterson</span>
+          <span class="text-gray-600 text-sm"> reacted to your recent post</span>
+          <span class="font-semibold cursor-pointer">5 end-game strategies to increase your win rate</span>
+        </div>
+        <div class="text-gray-400 text-xs">2 weeks ago</div>
+      </div>
+    </div>
+    <!-- Anna Kim left the group Chess Club
+    2 weeks ago -->
+    <div class="flex px-5 py-2 rounded-lg items-center">
+      <div class="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+        <img src="./assets/images/avatar-anna-kim.webp" alt="" class="w-full h-full object-cover">
+      </div>
+      <div class="m-4 flex-grow">
+        <div>
+          <span class="font-semibold cursor-pointer">Anna Kim</span>
+          <span class="text-gray-600 text-sm">left the group</span>
+          <span class="font-semibold cursor-pointer">Chess Club</span>
+        </div>
+        <div class="text-gray-400 text-xs">2 weeks ago</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="attribution mt-5">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Vensi Tejani</a>.
+  </div>
+</body>
+
+</html>

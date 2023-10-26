@@ -1,113 +1,137 @@
-import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <nav className="flex items-center justify-between px-10 py-5 font-plus-jakarta-sans font-500 text-16px">
+        <div className="flex items-center ">
+          <span className="text-2xl  sm:font-[.625rem] text-very-dark-blue font-semibold mr-2">Notifications</span>
+          <span className=" font-800  rounded-[4px] bg-Blue text-White text-xs w-6 h-5 flex items-center justify-center">
+            3
+          </span>
         </div>
+        <span className="cursor-pointer">Mark all as read</span>
+      </nav>
+
+
+      <div className=" mx-10 grid gap-3">
+        <div className="flex py-2 px-5 bg-very-light-grayish-blue shadow-md rounded-lg items-center">
+          <div className="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+            <img src="./assets/images/avatar-mark-webber.webp" alt="Profile Image" className="w-full h-full object-cover" />
+          </div>
+          <div className="m-4 flex-grow ">
+            <div>
+              <span className="font-800 cursor-pointer">Mark Webber </span>
+              <span className="dark-grayish-blue">reacted to your recent post </span>
+              <span className="font-semibold inline-flex items-center gap-1 cursor-pointer">My first tournament today!
+                <span className="w-1.5 h-1.5 bg-Red rounded-full"></span>
+              </span>
+            </div>
+
+            <div className="text-grayish-blue">1m ago</div>
+          </div>
+        </div>
+
+        <div className="flex px-5 py-2 bg-[#cee5ed36] shadow-md rounded-lg items-center">
+          <div className="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+            <img src="./assets/images/avatar-angela-gray.webp" alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="m-4 flex-grow">
+            <div>
+              <span className="font-semibold cursor-pointer">Angela Gray </span>
+              <span className="text-gray-600 text-sm inline-flex items-center gap-1">commented on your post
+                <span className="w-1.5 h-1.5  bg-Red rounded-full "></span>
+              </span>
+            </div>
+            <div className="text-gray-400 text-xs">1m ago</div>
+
+          </div>
+        </div>
+
+        <div className="flex px-5 py-2 bg-[#cee5ed36] shadow-md rounded-lg items-center">
+          <div className="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+            <img src="./assets/images/avatar-jacob-thompson.webp" alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="m-4 flex-grow">
+            <div>
+              <span className="font-semibold cursor-pointer">Jacob Thompson</span>
+              <span className="text-gray-600 text-sm">has joined your group</span>
+              <span className="font-semibold inline-flex items-center gap-1 cursor-pointer">Chess Club
+                <span className="w-1.5 h-1.5  bg-Red rounded-full"></span>
+              </span>
+            </div>
+            <div className="text-gray-400 text-xs">1 day ago</div>
+          </div>
+        </div>
+
+        <div className="flex flex-col px-5 py-2 rounded-lg  ">
+          <div className="flex items-center">
+            <div className="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+              <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="" className="w-full h-full object-cover" />
+            </div>
+            <div className="m-4 flex-grow">
+              <div>
+                <span className="font-semibold cursor-pointer">Rizky Hasanuddin</span>
+                <span className="text-gray-600 text-sm">sent you a private message</span>
+              </div>
+              <div className="text-gray-400 text-xs">5 days ago</div>
+            </div>
+          </div>
+          <div className="cursor-pointer border flex ml-[4.50rem] px-5 py-3 bg-white border-gray-300 rounded-lg items-center">
+            <p className="text-gray-400 text-sm">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks
+              now and
+              I'm already having lots of fun and improving my game.</p>
+          </div>
+        </div>
+
+
+
+
+        <div className="flex px-5 py-2 rounded-lg items-center">
+          <div className="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+            <img src="./assets/images/avatar-kimberly-smith.webp" alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="m-4 flex-grow">
+            <div>
+              <span className="font-semibold cursor-pointer">Kimberly Smith</span>
+              <span className="text-gray-600 text-sm">commented on your picture</span>
+            </div>
+            <div className="text-gray-400 text-xs">1 week ago</div>
+          </div>
+        </div>
+
+        <div className="flex px-5 py-2 rounded-lg items-center">
+          <div className="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+            <img src="./assets/images/avatar-nathan-peterson.webp" alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="m-4 flex-grow">
+            <div>
+              <span className="font-semibold cursor-pointer">Nathan Peterson</span>
+              <span className="text-gray-600 text-sm"> reacted to your recent post</span>
+              <span className="font-semibold cursor-pointer">5 end-game strategies to increase your win rate</span>
+            </div>
+            <div className="text-gray-400 text-xs">2 weeks ago</div>
+          </div>
+        </div>
+
+        <div className="flex px-5 py-2 rounded-lg items-center">
+          <div className="w-14 h-14 flex-shrink-0 rounded-full overflow-hidden">
+            <img src="./assets/images/avatar-anna-kim.webp" alt="" className="w-full h-full object-cover" />
+          </div>
+          <div className="m-4 flex-grow">
+            <div>
+              <span className="font-semibold cursor-pointer">Anna Kim</span>
+              <span className="text-gray-600 text-sm">left the group</span>
+              <span className="font-semibold cursor-pointer">Chess Club</span>
+            </div>
+            <div className="text-gray-400 text-xs">2 weeks ago</div>
+          </div>
+        </div>
+
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="attribution mt-5">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Vensi Tejani</a>.
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   )
 }
