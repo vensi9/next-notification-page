@@ -25,7 +25,7 @@ npm run dev
 
 ### Solution Screenshot
 
-![Solution Screenshot](./design/result.png)
+![Solution Screenshot](./app/../public/assets/images/result.png)
 
 ### Links
 
