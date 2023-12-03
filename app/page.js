@@ -130,7 +130,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center align-items-center my-10 text-[0.9rem]">
+      <div className="none sm:flex justify-center align-items-center my-10 text-[0.9rem]">
         Challenge by
         <a className="text-[#3e52a3] hover:text-[#0a317b] font-800 ml-1" href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>. 
         Coded by 
